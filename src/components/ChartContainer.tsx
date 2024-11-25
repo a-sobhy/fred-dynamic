@@ -53,7 +53,7 @@ const ChartContainer: FC = () => {
 
   useEffect(() => {
     if (observations.length > 0) {
-      const transformedObservations = observations.map((obs) => ({
+      const transformedObservations = observations?.map((obs) => ({
         date: obs.date,
         value: parseFloat(obs.value),
       }));
