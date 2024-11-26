@@ -181,13 +181,45 @@ const ChartContainer: FC = () => {
         </Box>
       </Box>
       <Box padding={2}>
-        {charts?.map((chart, index) => (
-          <Chart
-            key={chart.id}
-            chart={chart}
-            onRemove={() => handleRemoveChart(index)}
-          />
-        ))}
+        {charts.length > 0 ? (
+          charts?.map((chart, index) => (
+            <Chart
+              key={chart.id}
+              chart={chart}
+              onRemove={() => handleRemoveChart(index)}
+            />
+          ))
+        ) : (
+          <Box
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            justifyContent="center"
+            gap={7}
+            height="40rem"
+          >
+            <Box>
+              <h2 className="text-slate-900 text-[1.2rem] font-bold">
+                No charts added yet.
+              </h2>
+              <p>- Start by searching for an economic data series.</p>
+              <p>
+                - Select a date range, data limit, frequency and a series to get its
+                observations.
+              </p>
+            </Box>
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={() => setExpandSearch(!expandSearch)}
+              sx={{
+                padding: "1rem 5rem",
+              }}
+            >
+              Start
+            </Button>
+          </Box>
+        )}
       </Box>
     </>
   );

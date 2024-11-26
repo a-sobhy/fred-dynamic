@@ -46,7 +46,18 @@ const ConfigPanel: FC<ConfigPanelProps> = ({
   setChartFrequency,
 }) => (
   <Box>
-    <Box display="flex" gap={2}>
+    <Box
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        flexDirection: {
+          xs: "column",
+          sm: "column",
+          md: "row",
+        },
+        gap: 2,
+      }}
+    >
       <TextField
         size="small"
         label="Chart Title"
@@ -62,7 +73,19 @@ const ConfigPanel: FC<ConfigPanelProps> = ({
         fullWidth
       />
     </Box>
-    <Box display="flex" gap={2} mt={2}>
+    <Box
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        flexDirection: {
+          xs: "column",
+          sm: "column",
+          md: "row",
+        },
+        gap: 2,
+      }}
+      mt={2}
+    >
       <FormControl size="small" fullWidth>
         <InputLabel id="type-select-label">Chart Type</InputLabel>
         <Select
@@ -100,7 +123,19 @@ const ConfigPanel: FC<ConfigPanelProps> = ({
         </Select>
       </FormControl>
     </Box>
-    <Box display="flex" gap={2} mt={2}>
+    <Box
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        flexDirection: {
+          xs: "column",
+          sm: "column",
+          md: "row",
+        },
+        gap: 2,
+      }}
+      mt={2}
+    >
       <FormControl size="small" fullWidth>
         <InputLabel id="frequency-select-label">Chart frequency</InputLabel>
         <Select
