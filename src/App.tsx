@@ -1,12 +1,13 @@
-import { Box } from "@mui/material";
 import ChartContainer from "./components/ChartContainer";
-// import Dashboard from "./components/Dashboard";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
-    <Box padding={2}>
+    <>
       <ChartContainer />
-    </Box>
+      <ToastContainer />
+    </>
   );
 }
 
