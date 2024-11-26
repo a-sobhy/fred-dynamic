@@ -1,13 +1,17 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { SeriesMetadata } from "./seriesSlice";
 
 export interface ChartConfig {
   id: string;
+  seriesId: string;
   title: string;
   type: "line" | "bar" | "area";
   color: string;
   yAxisLabel: string;
   frequency: string;
+  limit: number;
   seriesIdts: { date: string; value: number }[];
+  seriesIdsList: SeriesMetadata[];
 }
 
 interface DashboardState {
